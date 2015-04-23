@@ -15,11 +15,12 @@ Feature: Reviewing reports
       When "Alice" clicks "View last week"
       Then "Alice"'s report should be shown
 
-    Scenario: A legitimate user wants to view the report
-      Given the report is attempted viewed
-      When the report does not exist
-      Then the report should be generated
-      And the report should be shown
+    Scenario: A legitimate user wants to view a non-generated report
+      Given The user is "Bob"
+      And "Alice"'s report for the last week is not generated
+      When "Bob" wants to view "Alice"'s report
+      Then "Alice"'s report should be generated
+      And "Bob" should see "Alice"'s report
 
     Scenario: The unassigned therapist views reports
       Given "Johnny" is logged in to the dashboard

@@ -30,19 +30,23 @@ Then(/^"([^"]*)"'s report should be shown$/) do |arg|
   pending
 end
 
-Given(/^the report is attempted viewed$/) do
+Given(/^The user is "([^"]*)"$/) do |arg|
   pending
 end
 
-When(/^the report does not exist$/) do
+And(/^"([^"]*)"'s report for the last week is not generated$/) do |arg|
   pending
 end
 
-Then(/^the report should be generated$/) do
+When(/^"([^"]*)" wants to view "([^"]*)"'s report$/) do |arg1, arg2|
   pending
 end
 
-And(/^the report should be shown$/) do
+Then(/^"([^"]*)"'s report should be generated$/) do |arg|
+  pending
+end
+
+And(/^"([^"]*)" should see "([^"]*)"'s report$/) do |arg1, arg2|
   pending
 end
 
