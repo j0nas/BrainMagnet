@@ -4,9 +4,9 @@ Feature: Filling out the forms
   In order to better understand my mood
 
   Background:
-    Patients should be able to fill in details into their forms on a daily basis. They shouldn't have to tell the system
-    it's a new day or create their forms themselves; these should just exist. Given this scenario, the system must know
-    when to present a new form, or pull up a form the user has already started.
+  Patients should be able to fill in details into their forms on a daily basis. They shouldn't have to tell the system
+  it's a new day or create their forms themselves; these should just exist. Given this scenario, the system must know
+  when to present a new form, or pull up a form the user has already started.
     Given I am a patient
 
   Scenario: New day, new form

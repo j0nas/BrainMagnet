@@ -25,8 +25,8 @@ Feature: a client buys access to the platform
 
     Examples:
     TODO FILL OUT WITH ACTUAL VALUES
-      | patients | options    | price     |
-      | 10       | 10, 20, 30 | 10, 20, 30|
-      | 20       | 20, 30     | 20, 30    |
-      | 30       | 30         | 30        |
+      | patients | options    | price      |
+      | 10       | 10, 20, 30 | 10, 20, 30 |
+      | 20       | 20, 30     | 20, 30     |
+      | 30       | 30         | 30         |
 
