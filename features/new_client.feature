@@ -17,24 +17,6 @@ Feature: a client buys access to the platform
     When I log in
     Then I should be asked to change my password
 
-  Scenario:
-    Given I have gotten access to the system
-    And I have logged in before
-    When I log in
-    Then I should be taken to the dashboard
-    But I should not be asked to change my password
-
-  Scenario:
-    Given I have gotten access to the system
-    And I am logged in
-    When I go to the therapists dashboard
-    Then I should see a list of my registered therapists
-
-  Scenario:
-    Given I am logged in
-    When I add a new therapist
-    Then that therapist should receive an email containing a username and password
-
   Scenario Outline:
     Given that I have <patients>
     When I view pricing options
