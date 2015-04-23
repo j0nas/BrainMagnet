@@ -30,4 +30,5 @@ Feature: Reviewing reports
     Scenario: "Paul" views reports
       Given "Paul" is logged in to the dashboard
       When "Paul" views his reports
-      Then "Alice"'s reports should not be visible
+      Then "Paul" should see his reports
+      But "Alice"'s reports should not be visible

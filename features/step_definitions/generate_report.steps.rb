@@ -69,3 +69,7 @@ end
 Then(/^"([^"]*)"'s reports should not be visible$/) do |arg|
   pending
 end
+
+Then(/^"([^"]*)" should see his reports$/) do |arg|
+  pending
+end
