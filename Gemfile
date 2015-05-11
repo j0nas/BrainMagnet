@@ -25,6 +25,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use devise for user authentication
 gem 'devise'
 
+# Use Omniauth for Facebook authentication integration
+gem 'omniauth-facebook'
+
 # Implement Bootstrap --> See https://github.com/twbs/bootstrap-sass for install instructions and usage
 gem 'bootstrap-sass', '~> 3.3.4'
 
