@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150511153512) do
+ActiveRecord::Schema.define(version: 20150511144233) do
 
   create_table "entries", force: :cascade do |t|
     t.date     "date"
@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 20150511153512) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string "provider"
+    t.string "uid"
     t.string   "name"
   end
 
