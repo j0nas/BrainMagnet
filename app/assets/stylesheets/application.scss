@@ -17,6 +17,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
 
 
+
 .navbar-text {
   margin-left: 15px!important;
 }
@@ -35,4 +36,7 @@ h1, h2, h3, h4, h5 {
 
 body {
   font-family: "Open Sans";
+}
+#date-head * {
+  display: inline-block;
 }

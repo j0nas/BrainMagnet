@@ -1,31 +1,36 @@
 <%= form_for(@entry) do |f| %>
-  <% if @entry.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
+    <% if @entry.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@entry.errors.count, "error") %> prohibited this entry from being saved:</h2>
 
-      <ul>
-      <% @entry.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+          <ul>
+            <% @entry.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+
+    <div id="date-head">
+      <button id="prev-btn" type="button" class="btn btn-default">Prev</button>
+      <h3 id="the-date"><%= @date.strftime("%A %d") %></h3>
+      <button id="next-btn" type="button" class="btn btn-default">Next</button>
     </div>
-  <% end %>
 
-    <h4><%= Date.today.strftime("%A %e")%></h4>
 
-  <div class="form-group">
-    <%= f.label :date %><br>
-    <%= f.date_select :date %>
-  </div>
-  <div class="form-group">
-    <%= f.label :mood %><br>
-    <%= f.number_field :mood %>
-  </div>
+    <div class="form-group">
+      <%= f.label :date %><br>
+      <%= f.date_select :date %>
+    </div>
+    <div class="form-group">
+      <%= f.label :mood %><br>
+      <%= f.number_field :mood %>
+    </div>
     <div class="form-group">
       <%= f.label :sleep %>
       <%= f.number_field :sleep %>
     </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
 <% end %>

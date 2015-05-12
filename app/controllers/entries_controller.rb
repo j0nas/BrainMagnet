@@ -15,6 +15,7 @@ class EntriesController < ApplicationController
   # GET /entries/new
   def new
     @entry = Entry.new
+    @date = Date.today
   end
 
   # GET /entries/1/edit
@@ -33,6 +34,7 @@ class EntriesController < ApplicationController
       else
         format.html { render :new }
         format.json { render json: @entry.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
