@@ -13,6 +13,9 @@
  */
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
+
 
 .navbar-text {
   margin-left: 15px!important;
@@ -20,4 +23,16 @@
 
 label {
   margin-bottom: 0px;
+}
+
+input[type=checkbox]{
+  margin-left: 0px!important;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: Roboto Slab;
+}
+
+body {
+  font-family: "Open Sans";
 }
