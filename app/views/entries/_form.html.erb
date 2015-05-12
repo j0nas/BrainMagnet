@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+    <h4><%= Date.today.strftime("%A %e")%></h4>
+
   <div class="form-group">
     <%= f.label :date %><br>
     <%= f.date_select :date %>

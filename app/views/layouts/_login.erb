@@ -1,7 +1,13 @@
 <% if patient_signed_in? %>
     <li class="dropdown">
       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <strong><%= current_patient.name %></strong> <span class="caret"></span></a>
+        <span class="glyphicon glyphicon-user" aria-hidden="true"></span> <strong>
+        <% if current_patient.name? %>
+            <%= current_patient.name %>
+            <% else %>
+            <%= current_patient.email %>
+        <% end %>
+            </strong> <span class="caret"></span></a>
       <ul class="dropdown-menu" role="menu">
         <li><p class="navbar-text">
           <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> <%= link_to 'Edit profile', edit_patient_registration_path, :class => 'navbar-link' %>
