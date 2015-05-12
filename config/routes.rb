@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :patients, :controllers => {:omniauth_callbacks => "patients/omniauth_callbacks"}
   resources :entries
+  devise_for :patients, :controllers => {:omniauth_callbacks => "patients/omniauth_callbacks"}
 
-  devise_for :patients
+
+#  devise_for :patients
   get 'welcome/index'
 
   devise_scope :patient do
