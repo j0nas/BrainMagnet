@@ -4,7 +4,7 @@ class EntriesController < ApplicationController
   # GET /entries
   # GET /entries.json
   def index
-    @entries = Entry.all
+    @entries = Entry.where('patient_id = ?', current_patient.id)
   end
 
   # GET /entries/1
@@ -14,7 +14,7 @@ class EntriesController < ApplicationController
   end
 
   def go_to_date
-    #entry = current_user.entries.find_by(date: params[:date])
+    #entry = current_patient.entries.find_by(date: params[:date])
     entry = Entry.find_by(date: params[:date])
     if(entry)
       redirect_to edit_entry_url entry

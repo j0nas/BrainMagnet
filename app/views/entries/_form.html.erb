@@ -11,18 +11,31 @@
         </div>
     <% end %>
 
-    <% date = @entry.date[:date].to_date %>
-    <input type="text", name="entry[date]" id="entry[date]" value="<%= date %>">
+    <% @entry.instance_variable_set(:@patient_id, current_patient.id)
+       if @entry.date.instance_of?(Date)
+         date = @entry.date
+       elsif @entry.date[:date].nil?
+         date = Date.today
+       else
+         date =  @entry.date[:date].to_date
+       end %>
 
-    <br /><br /><br />
+    <input type="hidden", name="entry[date]" id="entry[date]" value="<%= date %>">
+    <input type="text", name="entry[patient_id]" id="entry[patient_id]" value="<%= current_patient.id %>">
+
 
     <div id="date-head">
-      <a href="/entries/d/<%= date.prev_day %>"> <button id="prev-btn" type="button" class="btn btn-default">Prev </button></a>
-      <h4 id="the-date"><%= date.strftime("%A %d") %></h4>
-      <a href="/entries/d/<%= date.next_day %>"><button id="next-btn" type="button" class="btn btn-default">Next</button></a>
+      <a href="/entries/d/<%= date.prev_day %>" class="arrows"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></a>
+      <h2 id="the-date"><%= date.strftime("%A %d") %></h2>
+      <a href="/entries/d/<%= date.next_day %>" class="arrows"><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
     </div>
 
     <br />
+    <div class="form-group">
+      <%= f.label :patient_id %>
+      <%= f.number_field :patient_id %>
+    </div>
+
     <div class="form-group">
       <%= f.label :mood %><br>
       <%= f.number_field :mood %>
