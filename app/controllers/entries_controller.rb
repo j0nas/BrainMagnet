@@ -10,12 +10,23 @@ class EntriesController < ApplicationController
   # GET /entries/1
   # GET /entries/1.json
   def show
+    Entry.find_or_create_by(date: params[:date])
+  end
+
+  def go_to_date
+    #entry = current_user.entries.find_by(date: params[:date])
+    entry = Entry.find_by(date: params[:date])
+    if(entry)
+      redirect_to edit_entry_url entry
+    else
+      redirect_to new_entry_url date: params[:date]
+    end
   end
 
   # GET /entries/new
   def new
     @entry = Entry.new
-    @date = Date.today
+    @entry.date = params.permit(:date) #@entry.date
   end
 
   # GET /entries/1/edit
@@ -26,6 +37,7 @@ class EntriesController < ApplicationController
   # POST /entries.json
   def create
     @entry = Entry.new(entry_params)
+    @date = @entry.date
 
     respond_to do |format|
       if @entry.save
@@ -42,6 +54,8 @@ class EntriesController < ApplicationController
   # PATCH/PUT /entries/1
   # PATCH/PUT /entries/1.json
   def update
+    @date = @entry.date
+
     respond_to do |format|
       if @entry.update(entry_params)
         format.html { redirect_to @entry, notice: 'Entry was successfully updated.' }
@@ -63,6 +77,8 @@ class EntriesController < ApplicationController
     end
   end
 
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_entry
@@ -71,6 +87,8 @@ class EntriesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def entry_params
-      params.require(:entry).permit(:date, :mood)
+      params.require(:entry).permit(:date, :mood, :sleep)
     end
+
+
 end

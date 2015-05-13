@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 #  devise_for :patients
   get 'welcome/index'
 
+  get '/entries/d/:date', :to => 'entries#go_to_date'
+
   devise_scope :patient do
     # get 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_patient_session
   end
