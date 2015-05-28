@@ -13,5 +13,30 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap
+//= require bootstrap-slider
+//= require app
 //= require_tree .
-//= require bootstrap-sprockets
+//= #require bootstrap-sprockets
+
+
+// Slider items
+
+var moodSlider = $("#mood-slider").slider({
+    tooltip: 'always',
+    formatter: function () {
+        var tooltip;
+        switch ( moodSlider.getValue() ) {
+            case 0:
+            case 1:
+            case 2:
+                tooltip = "Extremely depressed";
+                break;
+            case 7: tooltip =  "something";
+                break;
+            default:
+                tooltip=  "else";
+        }
+        return tooltip;
+    }
+});

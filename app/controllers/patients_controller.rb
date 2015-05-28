@@ -1,5 +1,6 @@
 class PatientsController < ApplicationController
   before_action :set_patient, only: [:show, :edit, :update, :destroy]
+  layout 'admin_lte_2'
 
   # GET /patients
   # GET /patients.json

@@ -31,6 +31,9 @@ gem 'omniauth-facebook'
 # Implement Bootstrap --> See https://github.com/twbs/bootstrap-sass for install instructions and usage
 gem 'bootstrap-sass', '~> 3.3.4'
 
+# AdminLTE Admin Dashboard --> https://github.com/nicolas-besnard/adminlte2-rails
+gem 'adminlte2-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

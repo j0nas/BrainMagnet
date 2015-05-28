@@ -1,6 +1,8 @@
 class EntriesController < ApplicationController
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
 
+  layout 'admin_lte_2'
+
   # GET /entries
   # GET /entries.json
   def index

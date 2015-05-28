@@ -10,9 +10,16 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  // "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+ *= require_tree .
+ *= require bootstrap
+ *= require AdminLTE/AdminLTE
+ *= require AdminLTE/skins/skin-blue
+ *= require slider
+ *= require_self
+
  */
-@import "bootstrap-sprockets";
-@import "bootstrap";
+//@import "bootstrap-sprockets";
+//@import "bootstrap";
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600);
 

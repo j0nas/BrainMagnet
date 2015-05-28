@@ -36,6 +36,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    adminlte2-rails (0.0.3)
     arel (6.0.0)
     autoprefixer-rails (5.1.8.1)
       execjs
@@ -189,6 +190,7 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  adminlte2-rails
   bootstrap-sass (~> 3.3.4)
   byebug
   coffee-rails (~> 4.1.0)

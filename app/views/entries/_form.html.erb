@@ -21,7 +21,7 @@
        end %>
 
     <input type="hidden", name="entry[date]" id="entry[date]" value="<%= date %>">
-    <input type="text", name="entry[patient_id]" id="entry[patient_id]" value="<%= current_patient.id %>">
+    <input type="hidden", name="entry[patient_id]" id="entry[patient_id]" value="<%= current_patient.id %>">
 
 
     <div id="date-head">
@@ -31,10 +31,8 @@
     </div>
 
     <br />
-    <div class="form-group">
-      <%= f.label :patient_id %>
-      <%= f.number_field :patient_id %>
-    </div>
+      <input id="mood-slider" data-slider-id="red" class="slider-selection form-control" name="entry[mood]"
+             type="text" data-slider-min="0" data-slider-max="13" data-slider-step="1" data-slider-value="7"/>
 
     <div class="form-group">
       <%= f.label :mood %><br>
