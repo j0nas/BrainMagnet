@@ -108,9 +108,15 @@
           <!-- Menu Toggle Button -->
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <!-- The user image in the navbar-->
-            <img src="/assets/user2-160x160.jpg" class="user-image" alt="User Image"/>
+            <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
             <!-- hidden-xs hides the username on small devices so only the image appears. -->
-            <span class="hidden-xs">Alexander Pierce</span>
+            <span class="hidden-xs">
+              <% if current_patient.name? %>
+                 <%= current_patient.name %>
+              <% else %>
+                <%= current_patient.email %>
+              <% end %>
+            </span>
           </a>
           <ul class="dropdown-menu">
             <!-- The user image in the menu -->

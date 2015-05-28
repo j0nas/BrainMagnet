@@ -24,6 +24,7 @@
 
 var moodSlider = $("#mood-slider").slider({
     tooltip: 'always',
+    // todo: make tooltips display words, not numbers
     formatter: function () {
         var tooltip;
         switch ( moodSlider.getValue() ) {
@@ -32,10 +33,10 @@ var moodSlider = $("#mood-slider").slider({
             case 2:
                 tooltip = "Extremely depressed";
                 break;
-            case 7: tooltip =  "something";
+            case 7: tooltip =  "Normal";
                 break;
             default:
-                tooltip=  "else";
+                tooltip=  "Some mood";
         }
         return tooltip;
     }
