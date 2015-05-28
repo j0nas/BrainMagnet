@@ -22,6 +22,20 @@
 
 // Slider items
 
+//Control Sidebar Options
+
+var AdminLTEOptions = {
+    enableControlSidebar: true,
+    controlSidebarOptions: {
+        //Which button should trigger the open/close event
+        toggleBtnSelector: "[data-toggle='control-sidebar']",
+        //The sidebar selector
+        selector: ".control-sidebar",
+        //Enable slide over content
+        slide: true
+    }
+};
+
 var moodSlider = $("#mood-slider").slider({
     tooltip: 'always',
     // todo: make tooltips display words, not numbers

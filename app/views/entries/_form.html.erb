@@ -35,12 +35,28 @@
              type="text" data-slider-min="0" data-slider-max="13" data-slider-step="1" data-slider-value="7"/>
 
     <div class="form-group">
-      <%= f.label :mood %><br>
+      <%= f.label :mood %>
       <%= f.number_field :mood %>
     </div>
     <div class="form-group">
-      <%= f.label :sleep %><br>
+      <%= f.label :sleep %>
       <%= f.number_field :sleep %>
+    </div>
+    <div class="form-group">
+      <%= f.label :irritability %>
+      <%= f.number_field :irritability %>
+    </div>
+    <div class="form-group">
+      <%= f.label :anxiety %>
+      <%= f.number_field :anxiety %>
+    </div>
+    <div class="form-group">
+      <%= f.label :psychotic %><br>
+      <%= f.check_box :psychotic %>
+    </div>
+    <div class="form-group">
+      <%= f.label :notes %><br>
+      <%= f.text_field :notes %>
     </div>
     <div class="actions">
       <%= f.submit %>
